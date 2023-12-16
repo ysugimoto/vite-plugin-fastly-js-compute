@@ -1,0 +1,13 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["sugimoto@wnotes.net"]
+description = ""
+language = "javascript"
+manifest_version = 3
+name = "example"
+service_id = ""
+
+[scripts]
+  build = "npm run build"
+  post_init = "npm install"
