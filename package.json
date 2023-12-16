@@ -23,6 +23,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "biome lint ./src",
+    "test": "tsc && vitest",
     "prepare": "husky install"
   },
   "husky": {

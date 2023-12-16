@@ -1,15 +1,14 @@
 /// <reference types="@fastly/js-compute" />
 
 import { readFileSync } from "node:fs";
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath } from "node:url";
 import { resolve } from "node:path";
 
-const rootDir = fileURLToPath(new URL('.', import.meta.url));
+const rootDir = fileURLToPath(new URL(".", import.meta.url));
 
 export default () => {
   return {
-    name: "fastly-compute",
-    // enforce: "pre",
+    name: "fastly-js-compute",
     config() {
       return {
         test: {
@@ -29,4 +28,3 @@ export default () => {
     },
   };
 };
-
