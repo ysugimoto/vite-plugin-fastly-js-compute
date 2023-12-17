@@ -51,6 +51,17 @@ However, WebCrypto became a stable feature from node.js 20, then `globalThis.cry
 This means crypto related feature implementations are different between nodejs 20 and Fastly Compute runtime.
 If you write tests and runs in nodejs 20, crypto related tests will be succeeded unexpectedly.
 
+Then `vite-plugin-fastly-js-compute` provides global variable `__fastlyComputeNodeDefaultCrypto` which indicates `crypto` is polyfill-ed or not, you can switch some test cases to prevent errors:
+
+```js
+describe("Some Test", () => {
+  // Run tests only crypto is polyfill-ed - nodejs 18.x
+  it.runIf(!globalThis.__fastlyComputeNodeDefaultCrypto)("Crypto-related test", () => {
+      ...Some assertions here
+  });
+});
+```
+
 ## Contribution
 
 - Fork this repository
