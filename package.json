@@ -17,8 +17,6 @@
   },
   "dependencies": {
     "@fastly/js-compute": "^3.7.3",
-    "git-open": "^3.0.0",
-    "global": "^4.4.0",
     "node-fetch": "^3.3.2",
     "vite": "^5.0.10"
   },
