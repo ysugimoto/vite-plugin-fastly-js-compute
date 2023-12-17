@@ -12,7 +12,15 @@ Object.assign(globalThis, {
   addEventListener,
   CompressionStream,
   DecompressionStream,
-  crypto,
   fetch,
   fastly,
 });
+
+// Since nodejs 20.0 has globalThis.crypto as default, compartible with WebCrypto,
+// so we should not polyfill it in order to avoid overwrite error.
+if ("crypto" in globalThis) {
+  (globalThis as any).__fastlyComputeNodeDefaultCrypto = true;
+} else {
+  // Otherwise, need polyfill
+  Object.assign(globalThis, { crypto });
+}

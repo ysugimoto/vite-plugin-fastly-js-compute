@@ -11,6 +11,9 @@
     "skipLibCheck": true,
     "declaration": true
   },
+  "files": [
+    "types/global.d.ts"
+  ],
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "src/**/*.test.ts"]
 }
