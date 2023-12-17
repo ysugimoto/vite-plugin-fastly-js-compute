@@ -43,6 +43,14 @@ export default defineConfig({
 });
 ```
 
+## Important Notice
+
+Fastly Compute supports WebCrypto module partially so this package will do polyfill as the same.
+However, WebCrypto became a stable feature from node.js 20, then `globalThis.crypto` object exists and could not overwrite it.
+
+This means crypto related feature implementations are different between nodejs 20 and Fastly Compute runtime.
+If you write tests and runs in nodejs 20, crypto related tests will be succeeded unexpectedly.
+
 ## Contribution
 
 - Fork this repository
