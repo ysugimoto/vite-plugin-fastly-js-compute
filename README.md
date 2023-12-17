@@ -25,7 +25,7 @@ npm install -D vite-plugin-fastly-js-compute
 
 ## Usage / Example
 
-This package supports TypeScript ESM tyle.
+This package supports TypeScript ESM style.
 
 ESM:
 
