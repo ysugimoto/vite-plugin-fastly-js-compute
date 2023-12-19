@@ -33,7 +33,7 @@ ESM:
 // vitest.config.ts
 /// <reference types="vitest" />
 import { defineConfig } from "vitest/config";
-import fastlyCompute from "vite-plugin-fastly-compute-js";
+import fastlyCompute from "vite-plugin-fastly-js-compute";
 
 export default defineConfig({
   plugins: [fastlyCompute()],
