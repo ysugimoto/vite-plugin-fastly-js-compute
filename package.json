@@ -16,7 +16,7 @@
     "vitest": "^1.0.4"
   },
   "dependencies": {
-    "@fastly/js-compute": "^3.7.3",
+    "@fastly/js-compute": "^3.18.1",
     "node-fetch": "^3.3.2",
     "vite": "^5.0.10"
   },
